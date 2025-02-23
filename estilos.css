@@ -1,0 +1,398 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9f0ff;
+}
+
+
+.full-width-image {
+    width: 100%; /* Hace que la imagen ocupe el 100% del ancho */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border: 4px solid gray;
+}
+
+header {
+    background: #2c4763;
+    color: white;
+    padding: 0; /* Ajusta el padding para hacer el fondo más pequeño */
+    display: flex; /* Usamos flexbox para alinear elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Espacio entre la imagen y el menú */
+    height: 70px;
+
+}
+
+.header-content {
+    display: flex; /* Usamos flexbox para alinear la imagen y el texto */
+    align-items: center; /* Centra verticalmente la imagen y el texto */
+}
+
+.bus-image {
+    width: 25%;
+    height: auto;
+    margin-right: 15px; /* Espacio entre la imagen y el texto */
+}
+
+/* Estilos para el menú */
+nav {
+    margin-left: auto; /* Alinea el menú a la derecha */
+}
+
+.menu {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    display: flex; /* Muestra los elementos en línea */
+}
+
+.menu li {
+    margin: 0 15px; /* Espaciado entre los elementos del menú */
+}
+
+.menu a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: white; /* Color del texto */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+.menu a:hover {
+    background-color: #d6b600; /* Color de fondo al pasar el mouse */
+}
+
+.card-container {
+    display: flex; /* Usamos flexbox para alinear las tarjetas en fila */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 20px; /* Espacio entre las tarjetas */
+    margin: 20px; /* Margen alrededor del contenedor de tarjetas */
+}
+
+.card {
+    position: relative;
+    width: 300px; /* Ancho de cada tarjeta */
+    height: 150px; /* Alto de cada tarjeta */
+    color: #fff;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+}
+
+.card::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #75736f, #bdcbf4);
+    border-radius: 1.2em;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #75736f, #bdcbf4);
+    filter: blur(30px);
+}
+
+.card span {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    border-radius: 1em;
+}
+
+.card .content {
+    position: relative;
+    padding: 10px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.5em;
+    text-align: center;
+     /* Asegura que el texto esté centrado */
+
+}
+
+.dropdown-content {
+    display: none; /* Oculta el contenido por defecto */
+    padding: 10px;
+    background-color: #796767;
+    border: 1px solid #ffc800;
+    border-radius: 5px;
+    margin-top: 10px; /* Espacio entre la tarjeta y el contenido desplegable */
+}
+
+/* Estilo para el contenedor de las tarjetas */
+.tarjetas-container {
+    display: flex; /* Utiliza Flexbox para alinear las tarjetas */
+    justify-content: space-around; /* Espacio entre las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en caso de que no haya suficiente espacio */
+    margin: 20px; /* Margen alrededor del contenedor */
+}
+
+/* Estilo para cada tarjeta */
+.mi-tarjeta {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px; /* Ancho de cada tarjeta */
+    transition: transform 0.3s;
+    margin: 10px; /* Margen entre las tarjetas */
+}
+
+.mi-tarjeta:hover {
+    transform: scale(1.05); /* Efecto de hover */
+}
+
+.mi-imagen-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.mi-imagen {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fdb704; /* Cambia el color del borde si lo deseas */
+}
+
+.mi-texto {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+p {
+    color: #555;
+}
+
+/* Estilos para el contenedor de las tarjetas de servicios */
+.card-container {
+    margin: 20px; /* Margen alrededor del contenedor */
+}
+
+/* Estilo para cada tarjeta de servicio */
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card:hover {
+    background-color: #f1f1f1; /* Efecto de hover para las tarjetas de servicio */
+}
+
+.dropdown-content {
+    display: none; /* Oculta el contenido del dropdown por defecto */
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+
+.slide {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 0px;
+    
+}
+.slide-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px; /* Ajusta la altura según sea necesario */}
+.slide-open:checked + .slide-item {
+    position: static;
+    opacity: 100;
+}
+.slide-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+    width: 100%; /* Asegúrate de que ocupe todo el ancho */
+    height: 100%; /* Asegúrate de que ocupe toda la altura */
+}
+
+.slide-item img {
+    display: block;
+    width: 100%; /* Asegúrate de que la imagen ocupe todo el ancho */
+    height: 100%; /* Asegúrate de que la imagen ocupe toda la altura */
+    object-fit: cover; /* Esto asegura que la imagen cubra el contenedor sin distorsionarse */
+}
+.slide-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+.slide-control.prev {
+    left: 2%;
+}
+.slide-control.next {
+    right: 2%;
+}
+.slide-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+#slide-1:checked ~ .control-1,
+#slide-2:checked ~ .control-2,
+#slide-3:checked ~ .control-3 {
+    display: block;
+}
+.slide-indicador {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+.slide-indicador li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.slide-circulo {
+    color: #828282;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+.slide-circulo:hover {
+    color: #aaaaaa;
+}
+#slide-1:checked ~ .control-1 ~ .slide-indicador 
+     li:nth-child(1) .slide-circulo,
+#slide-2:checked ~ .control-2 ~ .slide-indicador 
+      li:nth-child(2) .slide-circulo,
+#slide-3:checked ~ .control-3 ~ .slide-indicador 
+      li:nth-child(3) .slide-circulo {
+    color: #428bca;
+}
+#titulo {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
+         -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+
+.footer {
+    background-color: #333; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 20px 0; /* Espaciado superior e inferior */
+    text-align: center; /* Centrar el texto */
+}
+
+.footer-content {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el contenido */
+    padding: 0 20px; /* Espaciado lateral */
+}
+
+.footer-links {
+    list-style: none; /* Quitar los puntos de la lista */
+    padding: 0; /* Quitar el padding */
+}
+
+.footer-links li {
+    display: inline; /* Mostrar los elementos en línea */
+    margin: 0 15px; /* Espaciado entre los enlaces */
+}
+
+.footer-links a {
+    color: white; /* Color de los enlaces */
+    text-decoration: none; /* Quitar el subrayado */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón */
+}
+
+
+.overlay-card {
+    position: absolute; /* Posiciona la tarjeta de forma absoluta */
+    top: 40%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrar */
+    background-color: rgba(255, 255, 255, 01); /* Fondo blanco con algo de transparencia */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    padding: 20px; /* Espaciado interno */
+    z-index: 100; /* Asegúrate de que esté por encima de otros elementos */
+    width: 500px; /* Ancho de la tarjeta */
+    text-align: center; /* Centra el texto */
+}
+
+.overlay-image {
+    width: 50%; /* Hace que la imagen ocupe el 100% del ancho de la tarjeta */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 70px; /* Establece una altura máxima para la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+    border-radius: 0; /* Bordes redondeados para la imagen */
+    margin-top: 0.5xp; /* Espacio entre el título y la imagen */
+}
+
+.overlay-card h2 {
+    margin: 0; /* Elimina el margen por defecto */
+}
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+

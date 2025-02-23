@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autobús Premium - Viaja con Estilo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<header>
+    <div class="header-content">
+        <img src="LOGO.PNG" alt="Autobús Premium" class="bus-image">
+    </div>
+    
+        <ul class="menu">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#about">Acerca de</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<body>
+   
+
+<div class="slide">
+            <div class="slide-inner">
+                <input class="slide-open" type="radio" id="slide-1" 
+                      name="slide" aria-hidden="true" hidden="" checked="checked">
+                <div class="slide-item">
+                    <img src="prueba.jpg">
+                </div>
+                <input class="slide-open" type="radio" id="slide-2" 
+                      name="slide" aria-hidden="true" hidden="">
+                <div class="slide-item">
+                    <img src="OIP.JPG">
+                </div>
+                <input class="slide-open" type="radio" id="slide-3" 
+                      name="slide" aria-hidden="true" hidden="">
+                <div class="slide-item">
+                    <img src="auto.jpg">
+                </div>
+                <label for="slide-3" class="slide-control prev control-1">‹</label>
+                <label for="slide-2" class="slide-control next control-1">›</label>
+                <label for="slide-1" class="slide-control prev control-2">‹</label>
+                <label for="slide-3" class="slide-control next control-2">›</label>
+                <label for="slide-2" class="slide-control prev control-3">‹</label>
+                <label for="slide-1" class="slide-control next control-3">›</label>
+                <ol class="slide-indicador">
+                    <li>
+                        <label for="slide-1" class="slide-circulo">•</label>
+                    </li>
+                    <li>
+                        <label for="slide-2" class="slide-circulo">•</label>
+                    </li>
+                    <li>
+                        <label for="slide-3" class="slide-circulo">•</label>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+
+        <div class="overlay-card">
+            <h2>HAZ DE TU VIAJE UNA EXPERIENCIA!</h2>
+            <img src="lunielL.PNG" class="overlay-image">
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    <br>
+    <br>
+    <br>
+    <div class="tarjetas-container">
+        <div class="mi-tarjeta">
+            <div class="mi-imagen-container">
+                <img src="barcelona.jpg" alt="Imagen" class="mi-imagen">
+            </div>
+            <div class="mi-texto">
+                <h2>Título de la Tarjeta 1</h2>
+                <p>Este es un texto descriptivo que puedes personalizar.</p>
+            </div>
+        </div>
+
+        <div class="mi-tarjeta">
+            <div class="mi-imagen-container">
+                <img src="bus.jpg" alt="Imagen" class="mi-imagen">
+            </div>
+            <div class="mi-texto">
+                <h2>Título de la Tarjeta 2</h2>
+                <p>Este es un texto descriptivo que puedes personalizar.</p>
+            </div>
+        </div>
+
+        <div class="mi-tarjeta">
+            <div class="mi-imagen-container">
+                <img src="dentro.jpg" alt="Imagen" class="mi-imagen">
+            </div>
+            <div class="mi-texto">
+                <h2>Título de la Tarjeta 3</h2>
+                <p>Este es un texto descriptivo que puedes personalizar.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="card-container">
+        <div class="card" onclick="toggleDropdown(this)">
+            <span></span>
+            <div class="content"> ALQUILER DE AUTOCAR </div>
+            <div class="dropdown-content">
+                <p>Detalles sobre el alquiler de autocares.</p>
+            </div>
+        </div>
+        <div class="card" onclick="toggleDropdown(this)">
+            <span></span>
+            <div class="content"> SERVICIO DE TRANSPORTE </div>
+            <div class="dropdown-content">
+                <p>Información sobre el servicio de transporte.</p>
+            </div>
+        </div>
+        <div class="card" onclick="toggleDropdown(this)">
+            <span></span>
+            <div class="content"> TOURS PERSONALIZADOS </div>
+
+            <div class="dropdown-content">
+                <p>Descripción de los tours personalizados.</p>
+            </div>
+        
+        </div>
+    </div>
+</body>
+
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2023 Tu Empresa. Todos los derechos reservados.</p>
+        <ul class="footer-links">
+            <li><a href="#about">Sobre nosotros</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </div>
+</footer>
+
+</html>
+
+<script>
+
+function toggleDropdown(card) {
+    const dropdown = card.querySelector('.dropdown-content');
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+}
+</script>
