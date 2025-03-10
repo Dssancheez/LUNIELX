@@ -5,7 +5,6 @@ body {
     background-color: #e9f0ff;
 }
 
-
 .full-width-image {
     width: 100%; /* Hace que la imagen ocupe el 100% del ancho */
     height: auto; /* Mantiene la proporción de la imagen */
@@ -20,7 +19,6 @@ header {
     align-items: center; /* Centra verticalmente los elementos */
     justify-content: space-between; /* Espacio entre la imagen y el menú */
     height: 70px;
-
 }
 
 .header-content {
@@ -66,6 +64,7 @@ nav {
     justify-content: center; /* Centra las tarjetas horizontalmente */
     gap: 20px; /* Espacio entre las tarjetas */
     margin: 20px; /* Margen alrededor del contenedor de tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan */
 }
 
 .card {
@@ -125,9 +124,7 @@ nav {
     justify-content: center;
     font-weight: 800;
     font-size: 1.5em;
-    text-align: center;
-     /* Asegura que el texto esté centrado */
-
+    text-align: center; /* Asegura que el texto esté centrado */
 }
 
 .dropdown-content {
@@ -220,22 +217,24 @@ p {
     margin-top: 5px;
 }
 
-
 .slide {
     position: relative;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
     margin-top: 0px;
-    
 }
+
 .slide-inner {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 300px; /* Ajusta la altura según sea necesario */}
+    height: 300px; /* Ajusta la altura según sea necesario */
+}
+
 .slide-open:checked + .slide-item {
     position: static;
     opacity: 100;
 }
+
 .slide-item {
     position: absolute;
     opacity: 0;
@@ -249,8 +248,10 @@ p {
     display: block;
     width: 100%; /* Asegúrate de que la imagen ocupe todo el ancho */
     height: 100%; /* Asegúrate de que la imagen ocupe toda la altura */
-    object-fit: cover; /* Esto asegura que la imagen cubra el contenedor sin distorsionarse */
+    object-fit: cover; /* Esto asegura que la imagen cubra el contenedor sin
+        object-fit: cover; /* Esto asegura que la imagen cubra el contenedor sin distorsionarse */
 }
+
 .slide-control {
     background: rgba(0, 0, 0, 0.28);
     border-radius: 50%;
@@ -262,29 +263,31 @@ p {
     line-height: 35px;
     position: absolute;
     top: 50%;
-    -webkit-transform: translate(0, -50%);
-    cursor: pointer;
-    -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
     text-align: center;
     width: 40px;
     z-index: 10;
 }
+
 .slide-control.prev {
     left: 2%;
 }
+
 .slide-control.next {
     right: 2%;
 }
+
 .slide-control:hover {
     background: rgba(0, 0, 0, 0.8);
     color: #aaaaaa;
 }
+
 #slide-1:checked ~ .control-1,
 #slide-2:checked ~ .control-2,
 #slide-3:checked ~ .control-3 {
     display: block;
 }
+
 .slide-indicador {
     list-style: none;
     margin: 0;
@@ -296,27 +299,29 @@ p {
     text-align: center;
     z-index: 10;
 }
+
 .slide-indicador li {
     display: inline-block;
     margin: 0 5px;
 }
+
 .slide-circulo {
     color: #828282;
     cursor: pointer;
     display: block;
     font-size: 35px;
 }
+
 .slide-circulo:hover {
     color: #aaaaaa;
 }
-#slide-1:checked ~ .control-1 ~ .slide-indicador 
-     li:nth-child(1) .slide-circulo,
-#slide-2:checked ~ .control-2 ~ .slide-indicador 
-      li:nth-child(2) .slide-circulo,
-#slide-3:checked ~ .control-3 ~ .slide-indicador 
-      li:nth-child(3) .slide-circulo {
+
+#slide-1:checked ~ .control-1 ~ .slide-indicador li:nth-child(1) .slide-circulo,
+#slide-2:checked ~ .control-2 ~ .slide-indicador li:nth-child(2) .slide-circulo,
+#slide-3:checked ~ .control-3 ~ .slide-indicador li:nth-child(3) .slide-circulo {
     color: #428bca;
 }
+
 #titulo {
     width: 100%;
     position: absolute;
@@ -328,9 +333,8 @@ p {
     font-family: 'Open Sans', sans-serif;
     z-index: 9999;
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
-         -1px 0px 2px rgba(255, 255, 255, 0);
+                 -1px 0px 2px rgba(255, 255, 255, 0);
 }
-
 
 .footer {
     background-color: #333; /* Color de fondo */
@@ -364,10 +368,9 @@ p {
     text-decoration: underline; /* Subrayar al pasar el ratón */
 }
 
-
 .overlay-card {
     position: absolute; /* Posiciona la tarjeta de forma absoluta */
-    top: 40%; /* Centra verticalmente */
+    top: 50%; /* Centra verticalmente */
     left: 50%; /* Centra horizontalmente */
     transform: translate(-50%, -50%); /* Ajusta la posición para centrar */
     background-color: rgba(255, 255, 255, 01); /* Fondo blanco con algo de transparencia */
@@ -385,14 +388,102 @@ p {
     max-height: 70px; /* Establece una altura máxima para la imagen */
     object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
     border-radius: 0; /* Bordes redondeados para la imagen */
-    margin-top: 0.5xp; /* Espacio entre el título y la imagen */
+    margin-top: 0.5px; /* Espacio entre el título y la imagen */
 }
 
 .overlay-card h2 {
     margin: 0; /* Elimina el margen por defecto */
 }
-html, body {
-    margin: 0px;
-    padding: 0px;
+
+/* Media Queries para Responsividad */
+@media (max-width: 1200px) {
+    .card-container, .tarjetas-container {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+        align-items: center; /* Centra las tarjetas */
+    }
+
+    .card, .mi-tarjeta {
+        width: 90%; /* Ancho más pequeño en pantallas pequeñas */
+    }
+
+    .bus-image {
+        width: 20%; /* Ajusta el tamaño de la imagen en el encabezado */
+    }
+
+    .menu li {
+        margin: 0 10px; /* Reduce el espaciado en el menú */
+    }
 }
 
+@media (max-width: 768px) {
+    header {
+        margin: 0; /* Elimina márgenes */
+        padding: 5px; /* Reduce el padding */
+    }
+
+
+    .menu {
+        width: 100vw; /* Ancho completo de la ventana */
+        position: fixed; /* Fija el menú en la parte superior */
+        top: 0; /* Coloca el menú en la parte superior */
+        left: 0; /* Alinea el menú a la izquierda */
+        background-color: var(--menu-background-color); /* Color de fondo */
+        z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+        display: flex; /* Usar flexbox para alinear los elementos */
+        justify-content: center; /* Centra los elementos horizontalmente */
+        align-items: center; /* Centra los elementos verticalmente */
+        padding: 10px 0; /* Espaciado interno */
+    }
+    
+    .menu ul {
+        display: flex; /* Usar flexbox para alinear los elementos de la lista */
+        padding: 0; /* Elimina el padding de la lista */
+        margin: 0; /* Elimina el margen de la lista */
+    }
+    
+    .menu li {
+        list-style-type: none; /* Elimina los puntos de la lista */
+        margin: 0 15px; /* Espaciado horizontal entre los elementos del menú */
+    }
+    
+    .menu a {
+        text-decoration: none; /* Elimina el subrayado */
+        color: white; /* Color del texto */
+        padding: 10px 15px; /* Espaciado interno */
+        border-radius: 5px; /* Bordes redondeados */
+        transition: background-color 0.3s; /* Transición suave para el hover */
+    }
+    
+    .menu a:hover {
+        background-color: #d6b600; /* Color de fondo al pasar el mouse */
+    }
+
+    .overlay-card {
+        width: 90%; /* Ancho más pequeño para la tarjeta overlay */
+    }
+
+    .mi-imagen {
+        width: 80px; /* Ajusta el tamaño de la imagen en las tarjetas */
+        height: 80px; /* Ajusta el tamaño de la imagen en las tarjetas */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.2em; /* Reduce el tamaño de la fuente en pantallas muy pequeñas */
+    }
+
+    .menu a {
+        padding: 5px 10px; /* Reduce el espaciado interno en el menú */
+    }
+
+    .slide-control {
+        font-size: 30px; /* Reduce el tamaño de los controles del slider */
+        height: 30px; /* Ajusta la altura de los controles */
+        width: 30px; /* Ajusta el ancho de los controles */
+    }
+
+    .slide-circulo {
+        font-size: 25px; /* Reduce el tamaño de los círculos de indicador */
+    }
+}
